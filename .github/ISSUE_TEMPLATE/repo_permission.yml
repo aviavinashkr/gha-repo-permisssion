@@ -1,0 +1,24 @@
+name: Repo Permission
+description: Repo Permission
+title: "[Repo Permission]: "
+labels: ["Repo Permission"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: input
+    id: repo-name
+    attributes:
+      label: Repository name
+      description: Paste your Repository name including you username e.g. <user-name>/<repo-name>
+      placeholder: <user-name>/<repo-name>
+  - type: dropdown
+    id: Permisssion
+    attributes:
+      label: Permisssion
+      description: "Permisssion for your repository"
+      options:
+        - Read
+        - Write
+    validations:
+      required: false

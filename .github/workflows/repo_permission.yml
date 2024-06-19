@@ -46,10 +46,10 @@ jobs:
         id: assign_team
         shell: bash
         run: |
-          repository-name="${{ steps.parse_issue_json.outputs.repository-name }}"
-          orgnization-name="${{ steps.parse_issue_json.outputs.orgnization-name }}"
-          team-name="${{ steps.parse_issue_json.outputs.team-name }}"
-          permisssion="${{ steps.parse_issue_json.outputs.permisssion }}"
+          repository-name=${{ steps.parse_issue_json.outputs.repository-name }}
+          orgnization-name=${{ steps.parse_issue_json.outputs.orgnization-name }}
+          team-name=${{ steps.parse_issue_json.outputs.team-name }}
+          permisssion=${{ steps.parse_issue_json.outputs.permisssion }}
            curl -L \
             -X PUT \
             -H "Accept: application/vnd.github+json" \

@@ -2,16 +2,28 @@ name: Repo Permission
 description: Repo Permission
 title: "[Repo Permission]: "
 labels: ["Repo Permission"]
-projects: ["octo-org/1", "octo-org/44"]
-assignees:
-  - octocat
+# projects: ["octo-org/1", "octo-org/44"]
+# assignees:
+#   - octocat
 body:
+  - type: input
+    id: orgnization-name
+    attributes:
+      label: orgnization name
+      description: Paste your orgnization name e.g. <orgnization-name>
+      placeholder: <orgnization-name>
   - type: input
     id: repo-name
     attributes:
       label: Repository name
-      description: Paste your Repository name including you username e.g. <user-name>/<repo-name>
-      placeholder: <user-name>/<repo-name>
+      description: Paste your Repository name including you username e.g. <repo-name>
+      placeholder: <repo-name>
+  - type: input
+    id: team-name
+    attributes:
+      label: Team name
+      description: Paste your Team name e.g. <team-name>
+      placeholder: <team-name>
   - type: dropdown
     id: Permisssion
     attributes:
